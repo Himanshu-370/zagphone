@@ -81,6 +81,8 @@ export default function Modal() {
                       <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full ">
                         <img
                           src={spinner}
+                          width={35}
+                          height="auto"
                           className="h-10 w-10 text-red-600 bg-white rounded-full"
                           aria-hidden="true"
                         />
@@ -144,6 +146,8 @@ export default function Modal() {
                       <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full ">
                         <img
                           src={check}
+                          width={35}
+                          height="auto"
                           className="h-10 w-10 text-red-600 bg-white rounded-full"
                           aria-hidden="true"
                         />

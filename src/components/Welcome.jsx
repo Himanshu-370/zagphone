@@ -25,9 +25,15 @@ function Welcome() {
       <div className="p-6">
         {/*Navbar */}
         <div className="mt-7 flex items-center justify-between w-full">
-          <img src={menubar} alt="menubar" />
-          <button className="bg-gray-50 bg-slate-100 rounded-full p-3">
-            <img src={user} alt="user" />
+          <img src={menubar} width={35} height="auto" alt="menubar" />
+          <button>
+            <img
+              src={user}
+              width={35}
+              height="auto"
+              alt="user"
+              className="bg-gray-50 bg-slate-100 rounded-full p-2"
+            />
           </button>
         </div>
 
@@ -35,19 +41,19 @@ function Welcome() {
         <div className="p-3 bg-white border rounded-t-3xl shadow-2xl absolute inset-x-0 -bottom-10">
           <div className="flex items-center justify-evenly">
             <button>
-              <img src={home} alt="home" />
+              <img src={home} width={76} height="auto" alt="home" />
             </button>
 
             <button>
-              <img src={cart} alt="cart" />
+              <img src={cart} width={16} height="auto" alt="cart" />
             </button>
 
             <button>
-              <img src={notification} alt="notification" />
+              <img src={notification} width={16} height="auto" alt="notification" />
             </button>
 
             <button>
-              <img src={profile} alt="profile" />
+              <img src={profile} width={16} height="auto" alt="profile" />
             </button>
           </div>
         </div>
@@ -82,12 +88,12 @@ function Welcome() {
           </div>
 
           <button type="submit" onClick={handleSearch}>
-            <img src={searchbtn} alt="searchbtn" />
+            <img src={searchbtn} width={50} height="auto" alt="searchbtn" />
           </button>
         </div>
 
         <div className="mt-5 flex items-center z-auto">
-          <img src={purseimg} alt="purseimg" />
+          <img src={purseimg} width="100%" height="auto" alt="purseimg" />
         </div>
 
         {/*New Arrivals section */}
@@ -100,7 +106,7 @@ function Welcome() {
         <div className="mt-5 flex items-center justify-between">
           <button className="flex-col items-center justify-center">
             <Link to="/item">
-              <img src={purse} alt="purse" />
+              <img src={purse} width="100%" height="auto" alt="purse" />
               <div className="text-black text-center mt-2">
                 <h2 className="font-bold text-md">The Marc Jacobs</h2>
                 <h4 className="font-light text-xs">Traveller Tote</h4>
@@ -111,7 +117,7 @@ function Welcome() {
 
           <button className="flex-col items-center justify-center">
             <Link to="/item">
-              <img src={shoes} alt="shoes" />
+              <img src={shoes} width="100%" height="auto" alt="shoes" />
               <div className="text-black text-center mt-2">
                 <h2 className="font-bold text-md">Axel Arigato</h2>
                 <h4 className="font-light text-xs">Clean 90 Triple Sneakers</h4>

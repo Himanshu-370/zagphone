@@ -48,10 +48,15 @@ function Item() {
     <React.Fragment>
       <div className="relative">
         {/* First Fold */}
-        <img src={girl} className="relative inset-x-0 top-0 mx-auto" />
+        <img
+          src={girl}
+          width="100%"
+          height="auto"
+          className="relative inset-x-0 top-0 mx-auto"
+        />
         <div className="absolute p-6 flex items-center justify-between inset-x-0 top-0">
-          <img src={mute} alt="mute" />
-          <img src={bag} alt="bag" />
+          <img src={mute} width={35} height="auto" alt="mute" />
+          <img src={bag} width={35} height="auto" alt="bag" />
         </div>
 
         {/* contains small dots and wishlist button */}
@@ -72,7 +77,12 @@ function Item() {
               }`}
               onClick={handleWishlist}
             >
-              <img src={wishlistActive ? loveRed : love} alt="wishlist" />
+              <img
+                src={wishlistActive ? loveRed : love}
+                width={35}
+                height="auto"
+                alt="wishlist"
+              />
             </button>
           </div>
         </div>
@@ -80,28 +90,30 @@ function Item() {
 
       {/* Second Fold */}
       <div className="border absolute bg-white rounded-t-3xl -mt-8 p-6">
-        <div className="flex items-center justify-between">
-          <div className="flex-col items-center justify-evenly gap-y-2">
-            <div className="text-xl font-bold text-black">Roller Rabbit</div>
-            <div className="text-xs font-light text-slate-500 mt-1">
+        <div className="flex items-start justify-between">
+          <div className="flex-col items-center gap-y-2">
+            <div className="text-xl font-bold text-black text-left">
+              Roller Rabbit
+            </div>
+            <div className="text-xs font-light text-slate-500 mt-1 text-left">
               Vado Odelle Dress
             </div>
 
             <div className="flex items-center gap-2 mt-2">
-              <img src={stars} />
+              <img src={stars} width={80} height="auto" alt="rating" />
               <div className="text-xs font-medium">(320 Review)</div>
             </div>
           </div>
 
           {/* Counts */}
-          <div className="flex-col items-center">
+          <div className="flex-col items-center justify-between">
             <div className="bg-slate-100 rounded-full py-1.5 px-5 flex items-center justify-around gap-3">
               <button onClick={handleDecrement}>
-                <img src={subtract} />
+                <img src={subtract} width={10} height="auto" alt="decrement" />
               </button>
               <p className="font-lg font-bold">{count}</p>
               <button onClick={handleIncrement}>
-                <img src={plus} />
+                <img src={plus} width={10} height="auto" alt="increment" />
               </button>
             </div>
             <div className="text-xs font-medium mt-2">Available in stock</div>
@@ -110,7 +122,7 @@ function Item() {
 
         {/* Different Sizes */}
         <div className="mt-5 flex-col">
-          <div className="text-lg font-bold">Size</div>
+          <div className="text-lg font-bold text-left">Size</div>
           <div className="mt-2 flex items-center justify-around text-center">
             <button
               className={`rounded-full ${
@@ -161,10 +173,10 @@ function Item() {
         </div>
 
         {/* Description */}
-        <div className="mt-5 flex-col">
+        <div className="mt-5 flex-col text-left">
           <div className="text-lg font-bold">Description</div>
           <div className="mt-2 text-xs font-regular">
-            <p>
+            <p className="text-justify">
               Get a little lift from these Sam Edelman sandals featuring ruched
               straps and leather lace-up ties, while a braided jute sole makes a
               fresh statement for summer.
@@ -175,14 +187,14 @@ function Item() {
         {/* Total Price */}
         <div className="mt-6 flex items-center justify-between">
           <div className="flex-col">
-            <div className="text-xs font-light">Total Price</div>
-            <div className="text-lg font-bold">${total}.00</div>
+            <div className="text-xs font-light text-left">Total Price</div>
+            <div className="text-xl font-bold">${total}.00</div>
           </div>
 
           {/* Buy Now Button */}
           <button className="bg-black rounded-full py-3 px-5 w-1/2">
             <Link to="/buy" className="flex items-center justify-center gap-3">
-              <img src={buy} />
+              <img src={buy} width={15} height="auto" alt="buy" />
               <h3 className="text-white">Buy Now</h3>
             </Link>
           </button>

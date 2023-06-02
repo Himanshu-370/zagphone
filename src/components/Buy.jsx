@@ -77,7 +77,7 @@ function Buy() {
 
   return (
     <React.Fragment>
-      <div className="border absolute bg-pinkbg rounded-2xl mt-8 p-6">
+      <div className="border absolute bg-pinkbg rounded-2xl mt-8 p-6 text-left">
         {/* Form */}
         <form onSubmit={handleSubmit}>
           <div className="flex-col items-center justify-between">
@@ -120,7 +120,7 @@ function Buy() {
 
               <div className="flex-col items-center justify-center">
                 <h3 className="text-md font-medium flex items-center gap-2">
-                  Security Code <img src={code} alt="Code" />
+                  Security Code <img src={code} width={18} height="auto" alt="Code" />
                 </h3>
                 <input
                   type="tel"
@@ -139,7 +139,7 @@ function Buy() {
               type="submit"
               className="rounded-lg bg-pink p-3 w-full text-white font-bold mt-5 flex items-center justify-center gap-2"
             >
-              <img src={lock} alt="Lock" />
+              <img src={lock} width={18} height="auto" alt="Lock" />
               Pay Now
             </button>
           </div>
